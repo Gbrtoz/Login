@@ -12,12 +12,7 @@ public class Login {
         userDatabase.put("teste4", "123456");
         userDatabase.put("teste5", "1234567");
     }
-    /**
-     * metodo de verificacao
-     * @param user
-     * @param senha
-     * @return 
-     * retorno do metodo*/
+    /* metodo de verificacao*/
     public boolean login(String user, String senha) { if (userDatabase.containsKey(user)) {
             String storedsenha = userDatabase.get(user);
             if (storedsenha.equals(senha)) {
@@ -28,11 +23,7 @@ public class Login {
         return false; 
         // Falha
     }
-    /**
-     * adiciona um novo usuario
-     * @param user
-     * @param senha
-     */
+    /* adiciona um novo usuario*/
     public void addUser(String user, String senha) {
         userDatabase.put(user, senha);
     }
